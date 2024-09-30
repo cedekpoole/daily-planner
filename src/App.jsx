@@ -1,6 +1,7 @@
+import { useState } from "react";
 import Logo from "./components/Logo";
 import Form from "./components/Form";
-import PackingList from "./components/ItemList";
+import ItemsList from "./components/ItemList";
 import Stats from "./components/Stats";
 
 const initialItems = [
@@ -9,12 +10,13 @@ const initialItems = [
 ];
 
 function App() {
+  const [list, setList] = useState(initialItems);
   return (
     <div className="w-full h-screen grid grid-rows-[auto_auto_1fr_auto]">
       <Logo />
-      <Form />
-      <PackingList initialItems={initialItems} />
-      <Stats stats={initialItems} />
+      <Form list={list} setList={setList} />
+      <ItemsList initialItems={list} />
+      <Stats stats={list} />
     </div>
   );
 }
