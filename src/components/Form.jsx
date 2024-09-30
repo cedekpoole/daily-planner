@@ -35,7 +35,7 @@ export default function Form({ list, setList }) {
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button className="cursor-pointer border-none text-3xl py-4 transform hover:scale-105">
+      <button className="cursor-pointer border-none rounded bg-slate-100 px-4 text-3xl py-5 transform hover:scale-105">
         Add
       </button>
     </form>
