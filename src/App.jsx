@@ -4,8 +4,8 @@ import PackingList from "./components/ItemList";
 import Stats from "./components/Stats";
 
 const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: true },
-  { id: 2, description: "Socks", quantity: 12, packed: false },
+  { id: 1, description: "Water the Plants", done: true },
+  { id: 2, description: "Finish the project", done: false },
 ];
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Logo />
       <Form />
       <PackingList initialItems={initialItems} />
-      <Stats />
+      <Stats stats={initialItems} />
     </div>
   );
 }
