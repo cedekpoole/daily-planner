@@ -10,7 +10,7 @@ const initialItems = [
 
 function App() {
   return (
-    <div className="app">
+    <div className="w-full h-screen grid grid-rows-[auto_auto_1fr_auto]">
       <Logo />
       <Form />
       <PackingList initialItems={initialItems} />
