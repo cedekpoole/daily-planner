@@ -4,7 +4,7 @@ export default function Form({ list, setList }) {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    console.log(list);
+    localStorage.setItem("todo-list", JSON.stringify(list));
   }, [list]);
 
   function handleSubmit(e) {

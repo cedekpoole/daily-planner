@@ -1,15 +1,21 @@
-export default function Item({ item }) {
+export default function Item({ item, toggleDone, removeItem }) {
   return (
     <li className="flex items-center gap-3">
       <span style={item.done ? { textDecoration: "line-through" } : {}}>
         {item.id}. {item.description}
       </span>
       {item.done ? (
-        <button className="cursor-pointer border-none text-2xl py-2 transform hover:scale-105">
+        <button
+          onClick={() => removeItem(item.id)}
+          className="cursor-pointer border-none text-2xl py-2 transform hover:scale-105"
+        >
           ❌
         </button>
       ) : (
-        <button className="cursor-pointer border-none text-2xl py-2 transform hover:scale-105">
+        <button
+          onClick={() => toggleDone(item.id)}
+          className="cursor-pointer border-none text-2xl py-2 transform hover:scale-105"
+        >
           ✔️
         </button>
       )}
