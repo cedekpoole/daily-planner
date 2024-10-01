@@ -1,4 +1,11 @@
 export default function Stats({ stats, setSortOrder }) {
+  if (!stats.length) {
+    return (
+      <footer className="bg-[#000000] text-[#f9f9f9] border-t-1 text-center font-bold py-8">
+        <em>Start adding some tasks to your list!</em>
+      </footer>
+    );
+  }
   const itemsDone = stats.filter((item) => item.done).length;
   const percentage = (itemsDone / stats.length) * 100;
 
