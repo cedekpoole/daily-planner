@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export default function Stats({ stats }) {
-  const [sortOrder, setSortOrder] = useState("default"); // track the sort order
-
+export default function Stats({ stats, setSortOrder }) {
   const itemsDone = stats.filter((item) => item.done).length;
 
   function handleSortChange(e) {
@@ -17,11 +13,10 @@ export default function Stats({ stats }) {
       </em>
       <label className="block my-4">Sort By...</label>
       <select
-        value={sortOrder}
         onChange={handleSortChange}
         className="block w-1/2 mx-auto p-2 rounded-lg text-[#000000] bg-[#f9f9f9]"
       >
-        <option value="default">Most Recent</option>
+        <option value="default">Default</option>
         <option value="done">Done First</option>
         <option value="undone">Done Last</option>
       </select>
