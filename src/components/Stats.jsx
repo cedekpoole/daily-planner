@@ -1,5 +1,6 @@
 export default function Stats({ stats, setSortOrder }) {
   const itemsDone = stats.filter((item) => item.done).length;
+  const percentage = (itemsDone / stats.length) * 100;
 
   function handleSortChange(e) {
     setSortOrder(e.target.value);
@@ -8,8 +9,12 @@ export default function Stats({ stats, setSortOrder }) {
   return (
     <footer className="bg-[#000000] text-[#f9f9f9] border-t-1 text-center font-bold py-8">
       <em>
-        You have {stats.length} items in your list, and you already have done{" "}
-        {itemsDone} ({((itemsDone / stats.length) * 100).toFixed(0) | 0}%)
+        {percentage === 100
+          ? `Congratulations! You have completed all ${stats.length} tasks!`
+          : `You have ${
+              stats.length
+            } items in your list, and you already have done 
+        ${itemsDone} (${percentage.toFixed(0) | 0}%)`}
       </em>
       <label className="block my-4">Sort By...</label>
       <select
