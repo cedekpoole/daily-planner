@@ -30,9 +30,9 @@ export default function Stats({ stats, setSortOrder }) {
         onChange={handleSortChange}
         className="block w-1/2 mx-auto p-2 rounded-lg text-[#000000] bg-[#f9f9f9]"
       >
-        <option value="default">Default</option>
-        <option value="done">Done First</option>
-        <option value="undone">Done Last</option>
+        <option value="default">DEFAULT</option>
+        <option value="done">SORT BY DONE FIRST</option>
+        <option value="undone">SORT BY DONE LAST</option>
       </select>
     </footer>
   );
