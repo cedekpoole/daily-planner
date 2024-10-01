@@ -17,7 +17,9 @@ export default function Stats({ stats, setSortOrder }) {
     <footer className="bg-[#000000] text-[#f9f9f9] border-t-1 text-center font-bold py-8">
       <em>
         {percentage === 100
-          ? `Congratulations! You have completed all ${stats.length} tasks!`
+          ? `Congratulations! You have completed all ${
+              stats.length === 1 ? "" : stats.length
+            } tasks!`
           : `You have ${
               stats.length
             } items in your list, and you already have done 
