@@ -24,20 +24,22 @@ export default function Form({ list, setList }) {
 
   return (
     <form
-      className="bg-[#e5771f] py-10 flex items-center justify-center gap-2"
+      className="bg-[#e5771f] py-10 flex flex-wrap items-center justify-center gap-2"
       onSubmit={handleSubmit}
     >
-      <h3 className="mr-7 text-4xl">What do you need to do today??</h3>
-      <input
-        type="text"
-        className="border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg p-2"
-        placeholder="Add a task..."
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      />
-      <button className="cursor-pointer border-none rounded bg-slate-100 px-4 text-3xl py-5 transform hover:scale-105">
-        Add
-      </button>
+      <h3 className="lg:mr-7 text-4xl">What do you need to do today??</h3>
+      <div className="gap-2 flex">
+        <input
+          type="text"
+          className="border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg p-2"
+          placeholder="Add a task..."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <button className="cursor-pointer border-none rounded bg-slate-100 px-4 text-3xl py-5 transform hover:scale-105">
+          Add
+        </button>
+      </div>
     </form>
   );
 }
