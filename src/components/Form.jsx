@@ -24,10 +24,12 @@ export default function Form({ list, setList }) {
 
   return (
     <form
-      className="bg-[#e5771f] py-10 flex flex-wrap items-center justify-center gap-2"
+      className="bg-[#703030] py-10 border-y-2 shadow-md  flex flex-wrap items-center justify-center gap-2"
       onSubmit={handleSubmit}
     >
-      <h3 className="lg:mr-7 text-4xl">What do you need to do today??</h3>
+      <h3 className="lg:mr-7 text-4xl text-[#f9f9f9]">
+        What do you need to do today??
+      </h3>
       <div className="gap-2 flex">
         <input
           type="text"

@@ -1,6 +1,6 @@
 export default function Item({ item, toggleDone, removeItem }) {
   return (
-    <li className="flex items-center justify-between gap-3 border shadow-md border-black rounded p-5 bg-lime-950">
+    <li className="flex items-center justify-between gap-3 shadow-md rounded-lg p-5 bg-[#E3CDA4]">
       <span style={item.done ? { textDecoration: "line-through" } : {}}>
         {item.id}. {item.description}
       </span>
